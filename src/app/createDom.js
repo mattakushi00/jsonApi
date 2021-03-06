@@ -8,8 +8,10 @@ export default (function () {
 
 		const $items = document.querySelectorAll('.list__item')
 
-		$items.forEach(item => {
-			item.insertAdjacentHTML('beforeend', `<div class="list__item_name">1</div>`)
+		$items.forEach((item, index) => {
+			arrayProp.forEach(prop => {
+				item.insertAdjacentHTML('beforeend', `<div class="item__prop">${arrayItem[index][prop].$t}</div>`)
+			})
 		})
 	}
 })()
