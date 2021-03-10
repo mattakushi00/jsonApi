@@ -1,10 +1,12 @@
 import creatItems from './createDom'
 import sheetsApi from './sheetsApi'
+import filter from './filters'
 
 sheetsApi()
 .then(data => {
 	const {arraySheetItems, arrayProperty} = getArrayFromData(data.feed.entry)
-	creatItems('list__item', arraySheetItems, arrayProperty)
+	creatItems(arraySheetItems, arrayProperty)
+	filter(arraySheetItems, arrayProperty)
 })
 
 function getArrayFromData(data) {

@@ -1,10 +1,10 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
-	devtool: isDev ? 'source-map' : false,
+	devtool: 'eval-source-map',
 
 	entry: path.join(__dirname, 'src/index.js'),
 
