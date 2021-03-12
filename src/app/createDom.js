@@ -1,10 +1,15 @@
 export default function (arrayItem, arrayProp) {
 	const $list = document.querySelector('.list')
+	const $table__header = document.querySelector('.table__header')
 	const $filters = document.querySelector('.filters')
 	let $items
 
 	arrayProp.forEach((prop, index) => {
 		$filters.insertAdjacentHTML('beforeend', `<input type="text" placeholder="${arrayProp[index].slice(4)}" name="${arrayProp[index]}" class="filters__item">`)
+	})
+
+	arrayProp.forEach((prop, index) => {
+		$table__header.insertAdjacentHTML('beforeend', `<div class="table__title"><span class="table__value">${arrayProp[index].slice(4)}</span><button class="table__sort" data-prop="${arrayProp[index]}">sort</button></div>`)
 	})
 
 	arrayItem.forEach(() => {

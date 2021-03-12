@@ -14,7 +14,7 @@ export default function (object, arrayProp) {
 		})
 		$list__item.forEach(item => item.classList.remove('display__none'))
 	})
-	console.log(object)
+
 	$filters.addEventListener('input', (e) => {
 		if (e.target.classList.contains('filters__item')) {
 			$list__item.forEach((item, index__item) => {
