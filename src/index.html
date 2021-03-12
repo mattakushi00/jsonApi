@@ -15,7 +15,28 @@
 			outline: none;
 		}
 
+		.wrap {
+			padding-top: 230px;
+		}
+
 		.filters {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			background: #fcfcfc;
+			box-shadow: 0 5px 20px rgba(0,0,0,.4);
+			position: fixed;
+			top: 0;
+			padding: 15px 0;
+			left: 0;
+			right: 0;
+		}
+
+		.filters__list {
+			width: 100%;
+			max-width: 100%;
+			flex: 1 0 100%;
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
@@ -24,7 +45,7 @@
 
 		.filters__item,
 		.filters__btn {
-			background: none;
+			background: #fff;
 			border: none;
 			box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 			margin: 10px;
@@ -34,7 +55,8 @@
 		}
 
 		.filters__btn {
-			flex: 1 0 100%;
+			border-radius: 5px;
+			max-width: 300px;
 			background: #ccc;
 		}
 
@@ -114,6 +136,7 @@
 
 <div class="wrap">
 	<form class="filters">
+		<div class="filters__list"></div>
 		<button class="filters__btn filters__btn_clear">Сбросить</button>
 	</form>
 	<div class="table">

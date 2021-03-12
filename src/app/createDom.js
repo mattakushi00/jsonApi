@@ -1,7 +1,7 @@
 export default function (arrayItem, arrayProp) {
 	const $list = document.querySelector('.list')
 	const $table__header = document.querySelector('.table__header')
-	const $filters = document.querySelector('.filters')
+	const $filters = document.querySelector('.filters__list')
 	let $items
 
 	arrayProp.forEach((prop, index) => {

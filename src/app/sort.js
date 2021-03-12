@@ -33,7 +33,7 @@ export default function () {
 		array.sort((a, b) => {
 			let itemA = target.classList.contains('sorted') ? a.childNodes[index].textContent : b.childNodes[index].textContent
 			let itemB = target.classList.contains('sorted') ? b.childNodes[index].textContent : a.childNodes[index].textContent
-			return Number(itemA) ? itemA - itemB : itemA.localeCompare(itemB)
+			return Number(itemA) ? itemA - itemB : itemA.toLowerCase().localeCompare(itemB)
 		})
 	}
 }

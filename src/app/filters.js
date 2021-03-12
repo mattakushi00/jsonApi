@@ -21,7 +21,7 @@ export default function (object, arrayProp) {
 				item.classList.remove('display__none')
 				item.childNodes.forEach((prop, index__prop) => {
 					if (
-						(object[index__item][arrayProp[index__prop]].$t.indexOf($filters__item[index__prop].value) === -1) &&
+						(object[index__item][arrayProp[index__prop]].$t.toLowerCase().indexOf($filters__item[index__prop].value.toLowerCase()) === -1) &&
 						($filters__item[index__prop].value.length !== 0)
 					) {
 						item.classList.add('display__none')
