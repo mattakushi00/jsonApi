@@ -14,6 +14,6 @@ sheetsApi()
 function getArrayFromData(data) {
 	return {
 		arraySheetItems: data,
-		arrayProperty: Object.getOwnPropertyNames(data[1]).filter(item => item.includes('$')),
+		arrayProperty: Object.getOwnPropertyNames(data[0]).filter(item => item.includes('$')),
 	}
 }
